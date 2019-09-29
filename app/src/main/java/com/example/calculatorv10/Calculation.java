@@ -7,13 +7,14 @@ public class Calculation {
         Double a=0.0,b=0.0;
         if(num1!="") a=Double.parseDouble(num1);
         if(num2!="") b=Double.parseDouble(num2);
-        Log.i("Ok",num1+","+num2);
+        // Log.i("Ok",num1+","+num2);
         Double result = a+b;
         int m,n;
         m=a.intValue();
         n=b.intValue();
         if(a-m!=0 || b-n!=0)
-            return result.toString();
+            return String.format("%.2f", result);
+        //return result.toString();
         return String.valueOf(result.intValue());
     }
     public static String subtract(String num1, String num2) {
@@ -21,12 +22,13 @@ public class Calculation {
         if(num1!="") a=Double.parseDouble(num1);
         if(num2!="") b=Double.parseDouble(num2);
         Double result =a-b;
-        Log.i("Ok",num1+","+num2+","+result.toString());
+        //Log.i("Ok",num1+","+num2+","+result.toString());
         int m,n;
         m=a.intValue();
         n=b.intValue();
         if(a-m!=0 || b-n!=0)
-            return result.toString();
+            return String.format("%.2f", result);
+        //return result.toString();
         return String.valueOf(result.intValue());
     }
     public static String multiply(String num1, String num2) {
